@@ -8,13 +8,14 @@ class Book extends Component {
     };
 
     render() {
+        let imageUrl = this.props.imageUrl;
         return(
             <div className="Book">
-                <h1>Name: {this.props.name} </h1>
-                {/* <div className="Book-img">
-                    <img src={} alt={this.props.name}/>
-                </div> */}
-                <h3>Rating: {this.props.rating}</h3>
+                <h1>Name: {this.props.title} </h1>
+                <div className="Book-img">
+                    <img src={imageUrl} alt={this.props.title}/>
+                </div>
+                <h3>Author: {this.props.author}</h3>
             </div>
         )
     }

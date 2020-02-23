@@ -1,34 +1,48 @@
 import React, { Component } from 'react'
 import './Library.css'
 import Section from '../Section/Section';
+// import axios from 'axios';
 
 
 class Library extends Component {
-    // static defaultProps = {
-    //     type: ['Roman', 'Manga', 'psychology','horror']
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
+            id: 0,
+            intervalIsSet: false
+        }
+    }
+    
+    // When component mounts
+    componentDidMount() {
+        this.getDataFromDb();
+        console.log('data in state', this.state.data);
+    }
+
+    // To kill component
+    // componentWillUnmount() {
+    //     if (this.state.intervalIsSet) {
+    //       clearInterval(this.state.intervalIsSet);
+    //       this.setState({ intervalIsSet: null });
+    //     }
     // }
-    static defaultProps = {
-        manga:[
-            {name:"Fairy Tail", id:1, rating:"8/10"},
-            {name:"Hajime no Ippo", id:2, rating:"8/10"},
-            {name:"Death Note Black edition", id:3, rating:"8/10"},
-            {name:"One Piece", id:4, rating:"8/10"},
-        ],
-        roman:[
-            {name:"l'Outsider", id:5, rating:"9/10"},
-            {name:"Aliss", id:6, rating:"9/10"},
-            {name:"11/22/63", id:7, rating:"8/10"},
-            {name:"Le vide", id:8, rating:"9/10"}
-        ]
+
+    getDataFromDb = () => {
+        fetch('http://localhost:3001/book/getBook')
+        .then(data => data.json())
+        .then(res => this.setState({data: res.data}))
+        .then(resAsJson => {
+            console.log(resAsJson);
+        })
     };
 
-    render(){
-        let manga = [...this.props.manga];
-        let roman = [...this.props.roman];
+    render() {
         return(
             <div>
-                <Section books={manga}/>
-                <Section books={roman}/>
+                <h1>TESTING integration with Backend</h1>
+                
+                <Section books={this.state.data} />
             </div>
         )
     }

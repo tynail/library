@@ -1,0 +1,24 @@
+{
+  "name": "fullstack_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd backend && node server.js\" \"cd library && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tynail/library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tynail/library/issues"
+  },
+  "homepage": "https://github.com/tynail/library#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

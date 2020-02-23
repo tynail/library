@@ -8,9 +8,10 @@ class Section extends Component {
             <div className="Books-card">
                 {this.props.books.map((book) => (
                     <Book 
-                    name={book.name}
-                    id={book.id}
-                    rating={book.rating}
+                    key={book.id}
+                    title={book.title}
+                    imageUrl={book.imageUrl}
+                    author={book.author}
                     />
                 ))}
             </div>
