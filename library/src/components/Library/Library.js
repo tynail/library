@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import './Library.css'
 import Section from '../Section/Section';
-// import axios from 'axios';
-
+import axios from 'axios';
 
 class Library extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
+            books: [],
+            author: {firstname: 'Stephen', lastname: 'King', age: 73},
             id: 0,
             intervalIsSet: false
         }
@@ -16,7 +16,7 @@ class Library extends Component {
     
     // When component mounts
     componentDidMount() {
-        this.getDataFromDb();
+        this.getBooks();
         console.log('data in state', this.state.data);
     }
 
@@ -28,12 +28,11 @@ class Library extends Component {
     //     }
     // }
 
-    getDataFromDb = () => {
-        fetch('http://localhost:3001/book/getBook')
-        .then(data => data.json())
-        .then(res => this.setState({data: res.data}))
-        .then(resAsJson => {
-            console.log(resAsJson);
+    getBooks = () => {
+        axios.get('http://localhost:3001/book/getBooks')
+        .then(res => { 
+            console.log('SOUPE OPERA!!', res);
+            this.setState({books: res.data.books});
         })
     };
 
@@ -41,8 +40,7 @@ class Library extends Component {
         return(
             <div>
                 <h1>TESTING integration with Backend</h1>
-                
-                <Section books={this.state.data} />
+                <Section books={this.state.books} />
             </div>
         )
     }

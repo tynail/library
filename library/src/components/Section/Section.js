@@ -6,11 +6,13 @@ class Section extends Component {
     render(){
         return(
             <div className="Books-card">
+                {console.log('PROPS', this.props.books)}
                 {this.props.books.map((book) => (
                     <Book 
                     key={book.id}
-                    title={book.title}
-                    imageUrl={book.imageUrl}
+                    title={book.title} 
+                    genre={book.genre}
+                    summary={book.summary}
                     author={book.author}
                     />
                 ))}
