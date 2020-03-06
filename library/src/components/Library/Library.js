@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import './Library.css'
 import Section from '../Section/Section';
 import axios from 'axios';
+import hardCodedBooks from './hardCodedBooks';
+import NavigationBar from '../Navbar/Navbar';
 
 class Library extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            books: [],
+            books: hardCodedBooks,
             author: {firstname: 'Stephen', lastname: 'King', age: 73},
             id: 0,
             intervalIsSet: false
@@ -15,10 +17,10 @@ class Library extends Component {
     }
     
     // When component mounts
-    componentDidMount() {
-        this.getBooks();
-        console.log('data in state', this.state.data);
-    }
+    // componentDidMount() {
+    //     this.getBooks();
+    //     console.log('data in state', this.state.data);
+    // }
 
     // To kill component
     // componentWillUnmount() {
@@ -39,6 +41,7 @@ class Library extends Component {
     render() {
         return(
             <div>
+                <NavigationBar />
                 <h1>TESTING integration with Backend</h1>
                 <Section books={this.state.books} />
             </div>

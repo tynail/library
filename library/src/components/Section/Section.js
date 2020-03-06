@@ -14,6 +14,7 @@ class Section extends Component {
                     genre={book.genre}
                     summary={book.summary}
                     author={book.author}
+                    imageUrl={book.imageUrl}
                     />
                 ))}
             </div>
