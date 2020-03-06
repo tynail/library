@@ -16,7 +16,7 @@ router.get('/getBookById', (req,res) => {
     Book.findById(id, (err, book) => {
         if(err) return res.json({succes:false, error:err});
         return res.json({succes:true, data: book});
-    })
+    }).populate({ path: 'author'}) //TODO check this to be able to retrieve the author link to the book
 });
 
 // Create method
