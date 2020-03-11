@@ -3,22 +3,10 @@
     text-align: center;
     align-items: center;
     border-radius: 5px;
-    margin: 0 2em;
 }
 
 .Book-img {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eceff1;
-    border-radius: 3px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-   
-}
-
-img {
     max-width:100%;
-    width: 500px;
+    width: 200px;
     height: 500px;
 }

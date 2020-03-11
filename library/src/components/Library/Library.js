@@ -3,7 +3,9 @@ import './Library.css'
 import Section from '../Section/Section';
 import axios from 'axios';
 import hardCodedBooks from './hardCodedBooks';
-import NavigationBar from '../Navbar/Navbar';
+import NavigationBar from '../NavigationBar/NavigationBar';
+import SalesCarousel from './../Carousel/Carousel';
+import { Container, Row, Col } from 'reactstrap';
 
 class Library extends Component {
     constructor(props) {
@@ -40,10 +42,14 @@ class Library extends Component {
 
     render() {
         return(
-            <div>
-                <NavigationBar />
-                <h1>Developping front-end</h1>
-                <Section books={this.state.books} />
+
+            <div className="">
+                <Container className="themed-container">>
+                    <NavigationBar />
+                    <h1>Developping front-end</h1>
+                    <SalesCarousel/>
+                    <Section books={this.state.books} />
+                </Container>
             </div>
         )
     }

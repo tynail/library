@@ -22,6 +22,7 @@ class Book extends Component {
                 <Card>
                     <CardImg
                         top
+                        className="Book-img"
                         width="100%"
                         src={this.props.imageUrl}
                         alt={this.props.title}
@@ -30,6 +31,7 @@ class Book extends Component {
                         <CardTitle>{this.props.author}</CardTitle>
                         <CardSubtitle>{this.props.genre}  </CardSubtitle>
                         <CardText>{summary}...</CardText>
+                        <Button>Ajouter</Button>
                     </CardBody>
                 </Card>
             </div>
