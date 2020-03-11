@@ -16,7 +16,7 @@ class Book extends Component {
     }
 
     render() {
-        const summary = this.props.summary.slice(0, 200);
+        const summary = this.props.summary.slice(0, 100);
         return (
             <div className="Book">
                 <Card>

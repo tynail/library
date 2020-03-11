@@ -44,10 +44,11 @@ class Library extends Component {
         return(
 
             <div className="">
-                <Container className="themed-container">>
+                <Container className="themed-container container">>
                     <NavigationBar />
                     <h1>Developping front-end</h1>
                     <SalesCarousel/>
+                    <Section books={this.state.books} />
                     <Section books={this.state.books} />
                 </Container>
             </div>

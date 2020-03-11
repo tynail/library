@@ -1,12 +1,13 @@
 .Book {
-    width: 300px;
     text-align: center;
-    align-items: center;
+    width: 200px;
+    height: auto;
     border-radius: 5px;
+    margin: 2em 2em 0 2em;
 }
 
 .Book-img {
     max-width:100%;
-    width: 200px;
-    height: 500px;
+    width: auto;
+    height: 350px;
 }

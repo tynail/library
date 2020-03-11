@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './Section.css'
 import Book from '../Book/Book';
-import { Container, Row, Col } from 'reactstrap';
-
+import uuid from 'react-uuid'
 
 class Section extends Component {
     render(){
@@ -11,7 +10,7 @@ class Section extends Component {
                 {console.log('PROPS', this.props.books)}
                 {this.props.books.map((book) => (
                         <Book 
-                        key={book.id}
+                        key={uuid()}
                         title={book.title} 
                         genre={book.genre}
                         summary={book.summary}
