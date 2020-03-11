@@ -2,7 +2,7 @@ const hardCodedBook =  [
     {
         title: 'Outsider',
         author: 'Stephen King',
-        summary: 'One monster kill and rape children',
+        summary: 'An eleven-year-old boy’s violated corpse is discovered in a town park. Eyewitnesses and fingerprints point unmistakably to one of Flint City’s most popular citizens—Terry Maitland, Little League coach, English teacher, husband, and father of two girls. Detective Ralph Anderson, whose son Maitland once coached, orders a quick and very public arrest. Maitland has an alibi, but Anderson and the district attorney soon have DNA evidence to go with the fingerprints and witnesses. Their case seems ironclad.',
         genre: 'Horror',
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91YVPs88hjL.jpg'
     },
@@ -10,7 +10,7 @@ const hardCodedBook =  [
     {
         title: 'Aliss',
         author: 'Patrick Senecal',
-        summary: 'Aliss se ramasse dans une place fuck top a montreal et fait des choses fuck top',
+        summary: "Alice, une jeune fille curieuse, délurée, fonceuse et intelligente de Brossard (Québec, Canada). A dix-huit ans, poussée par son besoin d'affirmation de soi, elle décide qu'il est temps de quitter le cégep et le cocon familial pour aller vivre sa vie là où tout est possible, c'est-à-dire dans la métropole.",
         genre: 'Thriller',
         imageUrl: 'https://www.alire.com/PageMill_Resources/Aliss.jpg'
     },
@@ -28,7 +28,7 @@ const hardCodedBook =  [
         author: 'Isaac Asimov',
         summary: 'Recueils de nouvelles sur le robots et les trois règles de la robotique',
         genre: 'Science-Fiction',
-        imageUrl: 'https://media.cultura.com/media/catalog/product/cache/1/image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/l/e/le-cycle-des-robots-tome-1-les-robots-tea-9782290121351_0.jpeg?t=1510210151'
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51DcyR3DuwL.jpg'
     }
 ]
 

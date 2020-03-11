@@ -42,7 +42,7 @@ class Library extends Component {
         return(
             <div>
                 <NavigationBar />
-                <h1>TESTING integration with Backend</h1>
+                <h1>Developping front-end</h1>
                 <Section books={this.state.books} />
             </div>
         )

@@ -5,7 +5,7 @@ import Book from '../Book/Book';
 class Section extends Component {
     render(){
         return(
-            <div className="Books-card">
+            <div className="Section">
                 {console.log('PROPS', this.props.books)}
                 {this.props.books.map((book) => (
                     <Book 
